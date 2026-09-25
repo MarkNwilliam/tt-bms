@@ -44,19 +44,15 @@ module cellbank #(
     // SPI capture
     logic [FRAME_W-1:0] shift;
     logic [3:0]         sclk_cnt;
-    logic               cs_d;
     logic               sclk_d;
     logic               frame_done;
 
     // sclk edge detect (single clk domain synchronizer)
     always_ff @(posedge clk or negedge rst_n) begin
-        if (!rst_n) begin
-            cs_d   <= 1'b1;
+        if (!rst_n)
             sclk_d <= 1'b0;
-        end else begin
-            cs_d   <= cs_n;
+        else
             sclk_d <= sclk;
-        end
     end
 
     wire sclk_rise = ~sclk_d & sclk & ~cs_n;

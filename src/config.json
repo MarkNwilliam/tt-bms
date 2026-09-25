@@ -11,10 +11,12 @@
 
   "//": "Here are some of the variables you may want to change:",
 
-  "//": "PL_TARGET_DENSITY_PCT - global placement density. ~0.8 min feasible on",
-  "//": "the fixed 1x1 die after the VW=10 shrink + L/R margin 3; 90 leaves slack",
-  "//": "for the post-CTS resizer without tripping the 0.95 ceiling.",
-  "PL_TARGET_DENSITY_PCT": 95,
+  "//": "PL_TARGET_DENSITY_PCT - global placement density. The BMS core is small",
+  "//": "but holds ~60 short FF-to-FF paths; the post-CTS resizer's buffer",
+  "//": "clusters overflowed detailed placement at 95. 88 leaves rows of",
+  "//": "whitespace for those insertions; margins dropped to 1 (no macros, so no",
+  "//": "displacement corridors needed) enlarges the usable core.",
+  "PL_TARGET_DENSITY_PCT": 88,
 
   "//": "CLOCK_PERIOD - Increase this in case you are getting setup time violations.",
   "//": "The value is in nanoseconds, so 20ns == 50MHz.",
@@ -51,12 +53,13 @@
   "//": "Don't put clock buffers on the outputs",
   "DESIGN_REPAIR_BUFFER_OUTPUT_PORTS": 0,
 
-  "//": "Reduce wasted space (margins shrunk from 6 -> 2 to enlarge the core",
-  "//": "area inside the fixed 1x1 project tile; the MPPT core is cell-bound).",
+  "//": "Reduce wasted space (margins shrunk from 6 -> 1 to enlarge the core",
+  "//": "area inside the fixed 1x1 project tile; the BMS core is cell-bound with",
+  "//": "no macros requiring displacement corridors).",
   "TOP_MARGIN_MULT": 1,
   "BOTTOM_MARGIN_MULT": 1,
-  "LEFT_MARGIN_MULT": 2,
-  "RIGHT_MARGIN_MULT": 2,
+  "LEFT_MARGIN_MULT": 1,
+  "RIGHT_MARGIN_MULT": 1,
 
   "//": "Absolute die size",
   "FP_SIZING": "absolute",

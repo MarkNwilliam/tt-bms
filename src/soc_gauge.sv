@@ -88,5 +88,5 @@ module soc_gauge #(
     end
 
     assign soc8   = soc_reg;
-    assign soc_ok = (soc_reg >= SOC_OK);
+    assign soc_ok = (soc_reg >= SOC_OK) && (v_pack > PACK_UV);
 endmodule
