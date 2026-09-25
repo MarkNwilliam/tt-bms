@@ -1,0 +1,51 @@
+# Tiny Tapeout project information
+project:
+  title:        "EV Battery Management Supervisor"
+  author:       "Mark Nkugwa"
+  discord:      "nkugwamarkwilliam"
+  description:  "Digital BMS supervisor core for 4S LFP swap packs: latched per-cell OVP/UVP, pack OV/UV, over-current, over-temperature (with thermal derate) and imbalance protection; absorption-window passive balancing; OCV + coulomb SOC gauge."
+  language:     "SystemVerilog"
+  clock_hz:     16000000  # demo clock; bank scan runs at clk/SCAN_DIV
+  tiles: "1x1"
+  top_module:  "tt_um_marknwilliam_bms"
+  source_files:
+    - "tt_um_marknwilliam_bms.v"
+    - "bms_top.sv"
+    - "cellbank.sv"
+    - "protect.sv"
+    - "balancer.sv"
+    - "charge_prot.sv"
+    - "soc_gauge.sv"
+
+pinout:
+  # Inputs
+  ui[0]: "EN"
+  ui[1]: "CHG_REQ"
+  ui[2]: "OTP"
+  ui[3]: "FLT_CLEAR"
+  ui[4]: "unused"
+  ui[5]: "unused"
+  ui[6]: "unused"
+  ui[7]: "unused"
+
+  # Outputs
+  uo[0]: "CHG_FET"
+  uo[1]: "DSG_FET"
+  uo[2]: "ALARM"
+  uo[3]: "BAL_ACT"
+  uo[4]: "SOC_OK"
+  uo[5]: "PACK_OK"
+  uo[6]: "LED0"
+  uo[7]: "LED1"
+
+  # Bidirectional pins (inputs: AFE SPI; output: bleed mask)
+  uio[0]: "AFE CS_N"
+  uio[1]: "AFE SCLK"
+  uio[2]: "AFE MOSI"
+  uio[3]: "BAL_MASK[3]"
+  uio[4]: "BAL_MASK[4]"
+  uio[5]: "BAL_MASK[5]"
+  uio[6]: "BAL_MASK[6]"
+  uio[7]: "BAL_MASK[7]" # (cells 3:0 drive BAL_MASK[3:0]; 7:4 are 0)
+
+yaml_version: 6
