@@ -1,0 +1,45 @@
+150. Printing statistics.
+
+=== tt_um_marknwilliam_bms ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+     1563        - wires
+     1598        - wire bits
+      170        - public wires
+      205        - public wire bits
+        8        - ports
+       43        - port bits
+     1579 2.16E+04 cells
+       32  406.426   sg13g2_a21o_1
+      130  1179.36   sg13g2_a21oi_1
+       23   333.85   sg13g2_a221oi_1
+       39  423.095   sg13g2_a22oi_1
+       60   544.32   sg13g2_and2_1
+       17  215.914   sg13g2_and3_1
+        6   87.091   sg13g2_and4_1
+        8   58.061   sg13g2_buf_1
+      162 7.94E+03   sg13g2_dfrbpq_1
+      121  658.627   sg13g2_inv_1
+       85  1542.24   sg13g2_mux2_1
+      159 1.15E+03   sg13g2_nand2_1
+       36  326.592   sg13g2_nand2b_1
+       52  471.744   sg13g2_nand3_1
+       12   152.41   sg13g2_nand3b_1
+       18  195.955   sg13g2_nand4_1
+      155 1.12E+03   sg13g2_nor2_1
+       35   317.52   sg13g2_nor2b_1
+       75    680.4   sg13g2_nor3_1
+       25   272.16   sg13g2_nor4_1
+      191 1.73E+03   sg13g2_o21ai_1
+       28  254.016   sg13g2_or2_1
+       16  203.213   sg13g2_or3_1
+        6   87.091   sg13g2_or4_1
+        4    29.03   sg13g2_tielo
+       61  885.427   sg13g2_xnor2_1
+       23   333.85   sg13g2_xor2_1
+
+   Chip area for module '\tt_um_marknwilliam_bms': 21606.215400
+     of which used for sequential elements: 7936.185600 (36.73%)
+
