@@ -108,6 +108,17 @@ Ready-to-post blurb (copy/paste):
 >
 > #EV #BMS #BatteryManagement #TinyTapeout #ASIC #HardwareDesign
 
+### Short version (X / Twitter)
+
+Copy-paste with the 3D viewer link:
+
+> Second chip is out — an EV battery management supervisor 🔋
+> latched OV/UV/OT/OA/OC protection + balancing, OCV + coulomb-count SOC
+> gauge, SPI AFE ingress · IHP SG13G2 via @TinyTapeout.
+> 2523 cells, 88.5% util, 0 DRC/LVS/timing violations, 0.87 mW.
+> 🗺️ 3D layout: https://marknwilliam.github.io/tt-bms/
+> #EV #BMS #chip #ASIC
+
 ## License
 
 Apache-2.0 (see LICENSE).
