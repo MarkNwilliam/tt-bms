@@ -86,6 +86,28 @@ Companion chip: [**Solar Charge Controller / MPPT**](https://github.com/MarkNwil
 (panel-side `tt-` sibling) — together a full panel → charge → battery
 supervision stack.
 
+## Share on LinkedIn
+
+Ready-to-post blurb (copy/paste):
+
+> Second chip fabricated — an EV battery management supervisor. 🔋
+>
+> Built for 4S LFP swap packs: latched protection (OV/UV/OT/OA/OC), passive
+> balancing, an OCV + Coulomb-counting SOC gauge, and SPI AFE ingress. All in
+> SystemVerilog, through the Tiny Tapeout flow on IHP SG13G2.
+>
+> Clean tapeout:
+> 🔋 2523 instances / 1877 standard cells · 88.5% util
+> ⚙️ 0 DRC, 0 LVS, 0 setup & hold violations (all corners)
+> ⚡ 0.87 mW
+>
+> The GDS, per-corner SPEF metrics, and a 3D layout are all in the repo:
+> 🔬 **https://marknwilliam.github.io/tt-bms/**
+>
+> It started as an RTL exercise — ended as a real, manufacturable core. 🚀
+>
+> #EV #BMS #BatteryManagement #TinyTapeout #ASIC #HardwareDesign
+
 ## License
 
 Apache-2.0 (see LICENSE).
